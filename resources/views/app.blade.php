@@ -11,8 +11,7 @@
 @stop
 
 @section('sidebar')
-    @include('templates.admin-lte.sidebar')
-    @include('menu')
+    {!! app('menu') !!}
 @stop
 
 @section('scripts')

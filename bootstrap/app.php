@@ -80,6 +80,10 @@ $app->routeMiddleware([
 
 $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\EventServiceProvider::class);
+$app->register(Igorwanbarros\BaseLaravel\Providers\BaseLaravelServiceProvider::class);
+$app->register(Igorwanbarros\Autenticacao\Providers\AutenticacaoServiceProvider::class);
+$app->register(Igorwanbarros\TemplatesLaravel\Providers\TemplatesLaravelServiceProviders::class);
+
 
 /*
 |--------------------------------------------------------------------------
