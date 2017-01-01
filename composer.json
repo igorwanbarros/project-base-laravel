@@ -7,10 +7,10 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/lumen-framework": "5.1.*",
-	    "igorwanbarros/base-laravel": "dev-master",
-	    "igorwanbarros/autenticacao-laravel": "dev-master",
-	    "igorwanbarros/php2html-laravel": "dev-master",
-	    "igorwanbarros/templates-laravel": "dev-master",
+	    "igorwanbarros/base-laravel": "*",
+	    "igorwanbarros/autenticacao-laravel": "*",
+	    "igorwanbarros/php2html-laravel": "*",
+	    "igorwanbarros/templates-laravel": "*",
         "vlucas/phpdotenv": "~1.0"
     },
     "require-dev": {
@@ -33,6 +33,5 @@
     "config": {
         "preferred-install": "dist"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
