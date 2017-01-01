@@ -1,0 +1,7 @@
+    <div class="<?php echo e($class); ?>">
+        <?php echo $html; ?>
+
+    </div>
+<?php if($isRow > 11 || $key == $max): ?>
+    <div class="clearfix"></div>
+<?php endif; ?>

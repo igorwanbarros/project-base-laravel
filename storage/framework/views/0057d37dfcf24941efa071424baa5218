@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <?php echo $__env->yieldContent('meta'); ?>
+    
+    <title>:: <?php echo env('APP_NAME', 'Admin-LTE'); ?> ::</title>
+
+    <?php echo $__env->yieldContent('styles'); ?>
+</head>
+<body class="<?php echo $__env->yieldContent('body-class'); ?>">
+
+<?php echo $__env->yieldContent('template-content'); ?>
+
+<?php echo $__env->yieldContent('scripts'); ?>
+</body>
+</html>

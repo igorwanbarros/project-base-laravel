@@ -1,4 +1,4 @@
-@extends('templates.admin-lte.app')
+@extends('templates.admin-lte.base')
 
 @section('styles')
     @include('templates.admin-lte.styles')
@@ -21,29 +21,26 @@
 @stop
 
 @section('body-class')
-    hold-transition skin-red sidebar-mini sidebar-collapse
+    layout-top-nav
 @stop
 
-@section('navbar')
-    @include('templates.admin-lte.navbar')
+@section('template-content')
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <div class="container">
+                <section class="content">
+                    @yield('content')
+                </section>
+            </div>
+        </div>
+    </div>
 @stop
 
-@section('sidebar')
-    {!! app('menu') !!}
-@stop
-
-@section('footer')
-    @include('templates.admin-lte.footer')
-@stop
-
-@section('modal')
-    @include('templates.admin-lte.modal')
-@stop
 
 @section('scripts')
     @include('templates.admin-lte.scripts')
-    <script src="{{url('assets/base-laravel/toastr/toastr.js')}}"></script>
     <script src="{{url('assets/base-laravel/base-laravel.js')}}"></script>
+    <script src="{{url('assets/base-laravel/toastr/toastr.js')}}"></script>
     <script src="{{url('assets/application.js')}}"></script>
     {!! toastr()->message() !!}
     {!! app('assets')->renderScripts() !!}

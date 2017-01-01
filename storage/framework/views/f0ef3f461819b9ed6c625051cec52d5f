@@ -1,0 +1,58 @@
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <?php foreach($acls as $acl): ?>
+        <?php
+            $percent = round(($acl->qtd_adicionada * 100) / $acl->qtd_permissoes, 2);
+            $percentual = number_format($percent, 2, ',', '.');
+            $classColor = 'bg-yellow-active';
+
+            if ($percent > 25) {
+                $classColor = 'bg-teal-active';
+            }
+
+            if ($percent > 50) {
+                $classColor = 'bg-olive';
+            }
+
+            if ($percent > 75) {
+                $classColor = 'bg-green-active';
+            }
+            $group = urlencode($acl->group);
+            $title = ucwords(str_replace(['_', '-'], ' ', $acl->group));
+        ?>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="info-box <?php echo e($classColor); ?>">
+                <a href="<?php echo e(url('perfis/' . $perfilId . '/permissoes/grupo/' . $group)); ?>"
+                   class="info-box-icon click-modal" data-title="Editar Permissões - Grupo <?php echo e($title); ?>">
+                    <span title="Total de Permissões" data-toggle="tooltip"><?php echo e($acl->qtd_permissoes); ?></span>
+                </a>
+
+                <div class="info-box-content">
+                    <a href="<?php echo e(url('perfis/' . $perfilId . '/permissoes/grupo/' . $group)); ?>"
+                       class="info-box-text click-modal" data-title="Editar Permissões - Grupo <?php echo e($title); ?>">
+                        <?php echo e($title); ?>
+
+                    </a>
+
+                    <a href="<?php echo e(url('perfis/' . $perfilId . '/permissoes/grupo/' . $group)); ?>"
+                       class="info-box-number click-modal" data-title="Editar Permissões - Grupo <?php echo e($title); ?>">
+                        <?php echo e($acl->qtd_adicionada); ?> / <?php echo e($acl->qtd_permissoes); ?>
+
+                    </a>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width: <?php echo e($percent); ?>%"></div>
+                    </div>
+
+                    <a href="<?php echo e(url('perfis/' . $perfilId . '/permissoes/grupo/' . $group)); ?>"
+                       class="progress-description  click-modal" data-title="Editar Permissões - Grupo <?php echo e($title); ?>">
+                        Adicionado: <?php echo e($percentual); ?>%
+                    </a>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app-ajax', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

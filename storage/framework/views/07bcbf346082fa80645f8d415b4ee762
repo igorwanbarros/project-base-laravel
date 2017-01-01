@@ -1,0 +1,38 @@
+<?php $__env->startSection('styles'); ?>
+    <?php echo $__env->make('templates.admin-lte.styles', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <style type="text/css">
+        body {
+            background-color: #E2E7F3 !important;
+        }
+        .form-control:focus {
+            border-color: #367fa9;
+        }
+        .login-box-body {
+            border: 1px solid silver;
+            box-shadow: 3px 5px 15px silver;
+        }
+    </style>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('body-class'); ?>
+    hold-transition login-page
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('template-content'); ?>
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="<?php echo e(url('/')); ?>"><b>Admin</b>LTE</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <?php echo $__env->yieldContent('content'); ?>
+        </div>
+        <!-- /.login-box-body -->
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+    <?php echo $__env->make('templates.admin-lte.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('templates.admin-lte.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

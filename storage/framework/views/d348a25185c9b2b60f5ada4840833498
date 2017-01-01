@@ -1,0 +1,4 @@
+<?php echo app('assets')->renderStyles(); ?>
+
+<?php echo $__env->yieldContent('content'); ?>
+<?php echo app('assets')->renderScripts(); ?>

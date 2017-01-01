@@ -1,0 +1,78 @@
+<?php $__env->startSection('meta'); ?>
+    <?php echo $__env->make('templates.admin-lte.meta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('styles'); ?>
+    <?php echo $__env->make('templates.admin-lte.styles', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('body-class'); ?>
+    hold-transition skin-yellow sidebar-mini sidebar-collapse
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('template-content'); ?>
+    <div class="wrapper">
+        <header class="main-header">
+            <a href="<?php echo e(url('/home')); ?>" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini" title="<?php echo env('APP_NAME'); ?>"><?php echo env('APP_NAME_MIN', 'Adm'); ?></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b><?php echo env('APP_NAME', 'Admin-LTE'); ?></b></span>
+            </a>
+
+            <nav class="navbar navbar-static-top" role="navigation">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <?php echo $__env->yieldContent('navbar'); ?>
+                    </ul>
+                </div>
+                <!--fim do custom-nav-bar-->
+            </nav>
+            <!--fim do nav-->
+
+        </header>
+        <!--fim do header-->
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <div class="user-panel"></div>
+                <!--fim do user-painel-->
+
+                <ul class="sidebar-menu">
+                    <?php echo $__env->yieldContent('sidebar'); ?>
+                </ul>
+                <!--fim da sidebar-menu - lista do menu inicial-->
+
+            </section>
+            <!--fim do menu principal-->
+        </aside>
+        <!--fim do main-sidebar-->
+
+        <div class="content-wrapper">
+            <section class="content">
+                <?php echo $__env->yieldContent('content'); ?>
+            </section>
+            <!--fim do content-->
+        </div>
+        <!--fim do content-wrapper-->
+
+        <footer class="main-footer">
+            <?php echo $__env->yieldContent('footer'); ?>
+        </footer>
+        <!--fim do main-footer-->
+
+    </div>
+    <!-- fim do wrapper-->
+
+    <?php echo $__env->yieldContent('modal'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+    <?php echo $__env->make('templates.admin-lte.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('templates.admin-lte.base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

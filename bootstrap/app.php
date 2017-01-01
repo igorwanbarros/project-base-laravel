@@ -64,7 +64,7 @@ $app->middleware([
 ]);
 
 $app->routeMiddleware([
-    'auth' => 'App\Http\Middleware\Authenticate',
+    'auth' => Igorwanbarros\Autenticacao\Http\Middleware\AutenticacaoMiddleware::class,
 ]);
 
 /*
@@ -83,7 +83,6 @@ $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Igorwanbarros\BaseLaravel\Providers\BaseLaravelServiceProvider::class);
 $app->register(Igorwanbarros\Autenticacao\Providers\AutenticacaoServiceProvider::class);
 $app->register(Igorwanbarros\TemplatesLaravel\Providers\TemplatesLaravelServiceProviders::class);
-
 
 /*
 |--------------------------------------------------------------------------

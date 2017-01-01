@@ -1,0 +1,37 @@
+<?php $__env->startSection('content'); ?>
+
+    <div class="row">
+        <div class="col-sm-12 text-right base-laravel__actions">
+            <a href="<?php echo url($urlBase . '/novo'); ?>"
+               class="btn btn-default">
+                <i class="fa fa-plus-circle"></i>
+                <span class="hidden-xs">Novo</span>
+            </a>
+            <?php if($model->id): ?>
+            <a href="<?php echo url($urlBase . '/excluir/' . $model->id); ?>" class="btn btn-danger">
+                <i class="fa fa-trash-o"></i>
+                <span class="hidden-xs">Excluir</span>
+            </a>
+            <?php else: ?>
+            <a href="#" class="btn btn-danger disabled">
+                <i class="fa fa-trash-o"></i>
+                <span class="hidden-xs">Excluir</span>
+            </a>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <?php echo $widget; ?>
+
+
+    <div class="row">
+        <div class="col-sm-12 text-right">
+            <a href="<?php echo url($urlBase); ?>" class="btn btn-default">
+                <i class="fa fa-chevron-circle-left"></i>
+                <span class="hidden-xs">Voltar</span>
+            </a>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
