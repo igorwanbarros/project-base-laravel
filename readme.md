@@ -1,5 +1,11 @@
 ## Project Base - Laravel/Lumen
 
+### Create-project
+
+```bash
+    composer create-project igorwanbarros/project-base-laravel=dev-master <your-name-project>
+```
+
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
 [![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
