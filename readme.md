@@ -2,8 +2,8 @@
 
 ### Create-project
 
-```bash
-    composer create-project igorwanbarros/project-base-laravel=dev-master <your-name-project>
+```php
+composer create-project igorwanbarros/project-base-laravel --prefer-dist <your-name-project>
 ```
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
