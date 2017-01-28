@@ -39,10 +39,12 @@
         ],
 	"post-install-cmd": [
             "php artisan vendor:publish",
+            "php artisan migrate",
             "php artisan autenticacao:acl"
         ],
         "post-update-cmd": [
             "php artisan vendor:publish",
+            "php artisan migrate",
             "php artisan autenticacao:acl"
         ]
     }
