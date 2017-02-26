@@ -42,9 +42,10 @@
 
 @section('scripts')
     @include('templates.admin-lte.scripts')
-    <script src="{{url('assets/base-laravel/toastr/toastr.js')}}"></script>
     <script src="{{url('assets/base-laravel/base-laravel.js')}}"></script>
-    <script src="{{url('assets/application.js')}}"></script>
+    <script>
+        BaseEvents.iCheckPlugin('red');
+    </script>
     {!! toastr()->message() !!}
     {!! app('assets')->renderScripts() !!}
 @stop
